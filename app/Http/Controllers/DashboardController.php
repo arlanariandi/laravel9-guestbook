@@ -23,6 +23,9 @@ class DashboardController extends Controller
         $listLastMonth = Guest::whereMonth('created_at', $lastMonth)->get();
         $countLastMonth = $listLastMonth->count();
 
-        return view('dashboard', compact('countToday', 'countLastMonth'));
+        // all guest
+        $countAll = Guest::count();
+
+        return view('dashboard', compact('countToday', 'countLastMonth', 'countAll'));
     }
 }

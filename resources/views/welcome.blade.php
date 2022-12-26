@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 </head>
 
-<body style="background-color: #000000">
+<body style="background-color: #1976D2">
     <!-- START: HEADER -->
     <section class="header-workly relative">
         <style scoped>
@@ -38,7 +38,7 @@
             }
 
             section.header-workly {
-                background: radial-gradient(100% 100% at 0% 0%, #114E4E 0%, #052D2D 59.9%, #041111 89.53%, #000909 100%);
+                background: radial-gradient(100% 100% at 0% 0%, #BBDEFB 0%, #03A9F4 59.9%, #2196F3 89.53%, #1976D2 100%);
             }
 
             .text-40 {
@@ -121,9 +121,9 @@
                 <div class="flex flex-col items-stretch lg:flex-row lg:items-center">
                     <div class="flex items-center justify-between">
                         <!-- LOGO -->
-                        <div> <img
-                                src="https://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header-workly/Logo.svg"
-                                alt="workly" /> </div> <!-- RESPONSIVE NAVBAR BUTTON TOGGLER -->
+                        <div>
+                            <img src="{{ asset('img/logo.png') }}" alt="logo guestbook" class="w-72" />
+                        </div> <!-- RESPONSIVE NAVBAR BUTTON TOGGLER -->
                     </div>
                 </div>
             </nav>
@@ -131,7 +131,6 @@
             START: HERO BACKGROUND -->
             <div class="mx-auto hero-bg max-w-screen-2xl">
                 <div class="flex justify-end invisible lg:visible">
-                    {{-- <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header-workly/img-header.png" --}}
                     <img src="{{ asset('img/profile.jpeg') }}" alt="background"
                         class="absolute top-0 z-0 object-cover h-full" />
                 </div>
@@ -142,11 +141,11 @@
                 <div class="grid grid-cols-1 gap-12 md:grid-cols-12">
                     <div class="md:col-span-11 lg:col-span-7">
                         <div
-                            class="text-5xl font-semibold leading-normal hero-title text-white-2 md:text-6xl leading-px85">
-                            One platform to boost your business </div>
+                            class="text-5xl font-semibold leading-normal hero-title text-gray-800 md:text-6xl leading-px85">
+                            One platform to manage your guests </div>
                         <div
-                            class="mt-8 text-xl font-normal leading-8 hero-description text-subtleGreen lg:leading-9 md:text-2xl">
-                            Learn how to manage your business efficiently with a platform trusted by global leaders.
+                            class="mt-8 text-xl font-normal leading-8 hero-description text-gray-700 lg:leading-9 md:text-2xl">
+                            Learn how to efficiently manage your guests with a platform trusted by global leaders.
                         </div>
 
                         <div class="mt-32">

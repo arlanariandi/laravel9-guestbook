@@ -16,17 +16,7 @@
                     </div>
 
                     <div class="mt-8 text-2xl">
-                        Welcome to your Jetstream application!
-                    </div>
-
-                    <div class="mt-6 text-gray-500">
-                        Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application.
-                        Laravel is designed
-                        to help you build your application using a development environment that is simple, powerful, and
-                        enjoyable. We believe
-                        you should love expressing your creativity through programming, so we have spent time carefully
-                        crafting the Laravel
-                        ecosystem to be a breath of fresh air. We hope you love it.
+                        Welcome to your Guestbook SMK Bhakti Praja Margasari application!
                     </div>
                 </div>
 
@@ -89,7 +79,7 @@
 
                             <a href="https://laracasts.com">
                                 <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
-                                    <div>Start watching Laracasts</div>
+                                    <div>Detail</div>
 
                                     <div class="ml-1 text-indigo-500">
                                         <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
@@ -102,6 +92,7 @@
                             </a>
                         </div>
                     </div>
+
                     {{-- all guests --}}
                     <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
                         <div class="flex items-center">
@@ -111,16 +102,29 @@
                                     d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
                                 </path>
                             </svg>
-                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a
-                                    href="https://tailwindcss.com/">Tailwind</a></div>
+                            <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">
+                                Semua Tamu
+                            </div>
                         </div>
 
                         <div class="ml-12">
-                            <div class="mt-2 text-sm text-gray-500">
-                                Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that
-                                doesn't get in your way. You'll be amazed how easily you can build and maintain fresh,
-                                modern designs with this wonderful framework at your fingertips.
+                            <div class="mt-2 text-5xl text-gray-500">
+                                {{ $countAll }}<span class="text-lg">tamu</span>
                             </div>
+
+                            <a href="{{ route('dashboard.guest.index') }}">
+                                <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                                    <div>Detail</div>
+
+                                    <div class="ml-1 text-indigo-500">
+                                        <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                                            <path fill-rule="evenodd"
+                                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
