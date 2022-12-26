@@ -22,21 +22,28 @@ class GuestController extends Controller
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
-                        <a class="inline-block border border-sky-500 bg-sky-500 text-white rounded-md px-4 py-1 m-1 font-semibold transition duration-500 ease select-none hover:bg-sky-800 focus:outline-none focus:shadow-outline"
-                            href="' . route('dashboard.guest.edit', $item->id) . '">
+                        <a class="inline-block border border-sky-500 bg-sky-500 text-white rounded-md px-4 py-1 m-1 font-semibold transition duration-500 ease select-none hover:bg-sky-800 focus:outline-none focus:shadow-outline" href="' . route('dashboard.guest.edit', $item->id) .
+                        '">
                             Edit
                         </a>
 
                         <a class="inline-block border border-amber-500 bg-amber-500 text-white rounded-md px-2 py-1 m-1 font-semibold transition duration-500 ease select-none hover:bg-amber-800 focus:outline-none focus:shadow-outline"
-                            href="' . route('dashboard.guest.show', $item->id) . '">
+                            href="' .
+                        route('dashboard.guest.show', $item->id) .
+                        '">
                             Show
                         </a>
 
-                        <form class="inline-block" action="' . route('dashboard.guest.destroy', $item->id) . '" method="POST">
+                        <form class="inline-block" action="' .
+                        route('dashboard.guest.destroy', $item->id) .
+                        '" method="POST">
                             <button class="border border-red-500 bg-red-500 text-white rounded-md px-2 py-1 m-1 font-semibold transition duration-500 ease select-none hover:bg-red-800 focus:outline-none focus:shadow-outline" >
                                 Delete
                             </button>
-                            ' . method_field('delete') . csrf_field() . '
+                            ' .
+                        method_field('delete') .
+                        csrf_field() .
+                        '
                         </form>
                     ';
                 })
@@ -116,7 +123,6 @@ class GuestController extends Controller
         alert()->success('Berhasil di Perbaharui', 'Data tamu berhasil diperbaharui!');
 
         return redirect()->route('dashboard.guest.index');
-
     }
 
     /**

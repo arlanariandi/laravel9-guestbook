@@ -152,9 +152,12 @@
                         <div class="mt-32">
                             @if (Route::has('login'))
                                 @auth
-                                    <a href="{{ url('/dashboard') }}" class="px-10 py-4 text-2xl font-semibold rounded-lg bg-white-2 text-darkGreen">Dashboard</a>
+                                    <a href="{{ url('/dashboard') }}"
+                                        class="px-10 py-4 text-2xl font-semibold rounded-lg bg-white-2 text-darkGreen">Dashboard</a>
                                 @else
-                                    <a href="{{ route('login') }}" class="px-10 py-4 text-2xl font-semibold rounded-lg bg-white-2 text-darkGreen">Log in</a>
+                                    <a href="{{ route('login') }}"
+                                        class="px-10 py-4 text-2xl font-semibold rounded-lg bg-white-2 text-darkGreen">Log
+                                        in</a>
 
                                     {{-- @if (Route::has('register'))
                                         <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
