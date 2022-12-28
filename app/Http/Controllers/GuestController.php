@@ -17,7 +17,7 @@ class GuestController extends Controller
     public function index()
     {
         if (request()->ajax()) {
-            $query = Guest::query();
+            $query = Guest::query()->orderBy('created_at', 'desc');
 
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {

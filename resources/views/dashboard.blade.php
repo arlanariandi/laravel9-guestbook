@@ -18,6 +18,7 @@
                         Welcome to your Guestbook SMK Bhakti Praja Margasari application!
                     </div>
                 </div>
+
                 {{-- content --}}
                 <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-3">
                     {{-- today's guest --}}
@@ -93,6 +94,74 @@
                         </div>
                     </div>
                 </div>
+
+                {{-- chart --}}
+                <div class="m-12">
+                    <canvas id="myChart"></canvas>
+                </div>
+
+                {{-- chart js --}}
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <!-- File JavaScript -->
+                <script>
+                    var ctx = document.getElementById('myChart').getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: [
+                                @foreach ($months as $label)
+                                    '{{ $label }}',
+                                @endforeach
+                            ],
+                            datasets: [{
+                                label: 'Jumlah Tamu',
+                                data: [
+                                    @foreach ($guests as $guest)
+                                        {{ $guest->count }},
+                                    @endforeach
+                                ],
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)',
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(255, 206, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)'
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162,235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)',
+                                    'rgba(255, 99, 132, 1)',
+                                    'rgba(54, 162, 235, 1)',
+                                    'rgba(255, 206, 86, 1)',
+                                    'rgba(75, 192, 192, 1)',
+                                    'rgba(153, 102, 255, 1)',
+                                    'rgba(255, 159, 64, 1)'
+                                ],
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }]
+                            }
+                        }
+                    });
+                </script>
             </div>
         </div>
     </div>
