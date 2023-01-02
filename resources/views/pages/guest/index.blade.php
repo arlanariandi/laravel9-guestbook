@@ -52,6 +52,10 @@
                         name: 'address'
                     },
                     {
+                        data: 'description',
+                        name: 'description'
+                    },
+                    {
                         data: 'created_at',
                         name: 'created_at'
                     },
@@ -85,6 +89,7 @@
                                 <th>ID</th>
                                 <th>Nama</th>
                                 <th>Alamat</th>
+                                <th>Tujuan</th>
                                 <th>Tanggal</th>
                                 <th>Action</th>
                             </tr>
