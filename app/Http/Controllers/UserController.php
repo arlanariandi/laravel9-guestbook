@@ -99,7 +99,13 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $data = $request->all();
+        $user->update($data);
+
+        // alert
+        alert()->success('Berhasil di Perbaharui', 'Data user berhasil diperbaharui!');
+
+        return redirect()->route('dashboard.user.index');
     }
 
     /**

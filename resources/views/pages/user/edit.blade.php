@@ -36,7 +36,7 @@
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Jenis
                                 Kelamin
                                 <span class="text-red-500">*</span></label>
-                            <select name="gender"
+                            <select name="roles"
                                 class="appearance-none block w-full lg:w-1/2 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                                 <option value="{{ $user->roles }}" selected>{{ $user->roles }}</option>
                                 <option disabled>--- pilih jenis role ---</option>
