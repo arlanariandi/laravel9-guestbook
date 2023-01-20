@@ -148,7 +148,7 @@
                             Learn how to efficiently manage your guests with a platform trusted by global leaders.
                         </div>
 
-                        <div class="mt-32">
+                        <div class="mt-24">
                             @if (Route::has('login'))
                                 @auth
                                     <a href="{{ url('/dashboard') }}"
@@ -158,9 +158,10 @@
                                         class="px-10 py-4 text-2xl font-semibold rounded-lg bg-white-2 text-darkGreen">Log
                                         in</a>
 
-                                    {{-- @if (Route::has('register'))
-                                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                                    @endif --}}
+                                    @if (Route::has('register'))
+                                        <a href="{{ route('register') }}"
+                                            class="ml-4 px-10 py-4 text-2xl font-semibold rounded-lg bg-white-2 text-darkGreen">Register</a>
+                                    @endif
                                 @endauth
                             @endif
                         </div>
