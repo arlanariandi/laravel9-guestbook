@@ -19,6 +19,8 @@ class IsAdmin
     {
         if (Auth::user() && Auth::user()->roles == "ADMIN") {
             return $next($request);
+        } elseif (Auth::user() && Auth::user()->roles == "GURU") {
+            return $next($request);
         }
         return redirect("/");
     }

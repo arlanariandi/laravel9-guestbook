@@ -24,6 +24,14 @@
                         <x-jet-nav-link href="{{ route('dashboard.guest.index') }}" :active="request()->routeIs('dashboard.guest.index')">
                             {{ __('Buku Tamu') }}
                         </x-jet-nav-link>
+
+                        <x-jet-nav-link href="{{ route('dashboard.guest.index') }}" :active="request()->routeIs('dashboard.guest.index')">
+                            {{ __('Restore') }}
+                        </x-jet-nav-link>
+                    @elseif (Auth::user()->roles == 'GURU')
+                        <x-jet-nav-link href="{{ route('dashboard.guest.index') }}" :active="request()->routeIs('dashboard.guest.index')">
+                            {{ __('Buku Tamu') }}
+                        </x-jet-nav-link>
                     @endif
                 </div>
             </div>

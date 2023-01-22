@@ -13,73 +13,122 @@
         <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script>
         <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
 
-        <script>
-            // AJAX DataTable
-            var datatable = $('#crudTable').DataTable({
-                // responsive
-                rowReorder: {
-                    selector: 'td:nth-child(2)'
-                },
-                responsive: true,
+        @if (Auth::user()->roles == 'ADMIN')
+            <script>
+                // AJAX DataTable
+                var datatable = $('#crudTable').DataTable({
+                    // responsive
+                    rowReorder: {
+                        selector: 'td:nth-child(2)'
+                    },
+                    responsive: true,
 
-                // buttom
-                dom: 'Blfrtip',
-                buttons: [
-                    'excel', 'pdf', 'print'
-                ],
+                    // buttom
+                    dom: 'Blfrtip',
+                    buttons: [
+                        'excel', 'pdf', 'print'
+                    ],
 
-                // serverSide
-                processing: true,
-                serverSide: true,
+                    // serverSide
+                    processing: true,
+                    serverSide: true,
 
-                ajax: {
-                    url: '{!! url()->current() !!}'
-                },
+                    ajax: {
+                        url: '{!! url()->current() !!}'
+                    },
 
-                columns: [{
-                        data: 'DT_RowIndex',
-                        name: 'DT_RowIndex',
-                        orderable: false,
-                        searchable: false,
-                        width: '5%'
+                    columns: [{
+                            data: 'DT_RowIndex',
+                            name: 'DT_RowIndex',
+                            orderable: false,
+                            searchable: false,
+                            width: '5%'
+                        },
+                        {
+                            data: 'name',
+                            name: 'name'
+                        },
+                        {
+                            data: 'address',
+                            name: 'address'
+                        },
+                        {
+                            data: 'description',
+                            name: 'description'
+                        },
+                        {
+                            data: 'created_at',
+                            name: 'created_at'
+                        },
+                        {
+                            data: 'action',
+                            name: 'action',
+                            orderable: false,
+                            searchable: false,
+                            width: '15%'
+                        }
+                    ]
+                })
+            </script>
+        @else
+            <script>
+                // AJAX DataTable
+                var datatable = $('#crudTable').DataTable({
+                    // responsive
+                    rowReorder: {
+                        selector: 'td:nth-child(2)'
                     },
-                    {
-                        data: 'name',
-                        name: 'name'
+                    responsive: true,
+
+                    // serverSide
+                    processing: true,
+                    serverSide: true,
+
+                    ajax: {
+                        url: '{!! url()->current() !!}'
                     },
-                    {
-                        data: 'address',
-                        name: 'address'
-                    },
-                    {
-                        data: 'description',
-                        name: 'description'
-                    },
-                    {
-                        data: 'created_at',
-                        name: 'created_at'
-                    },
-                    {
-                        data: 'action',
-                        name: 'action',
-                        orderable: false,
-                        searchable: false,
-                        width: '15%'
-                    }
-                ]
-            })
-        </script>
+
+                    columns: [{
+                            data: 'DT_RowIndex',
+                            name: 'DT_RowIndex',
+                            orderable: false,
+                            searchable: false,
+                            width: '5%'
+                        },
+                        {
+                            data: 'name',
+                            name: 'name'
+                        },
+                        {
+                            data: 'address',
+                            name: 'address'
+                        },
+                        {
+                            data: 'description',
+                            name: 'description'
+                        },
+                        {
+                            data: 'created_at',
+                            name: 'created_at'
+                        },
+                    ]
+                })
+            </script>
+        @endif
+
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="mb-10">
-                <a href="{{ route('dashboard.guest.create') }}"
-                    class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mr-4 rounded-md shadow-lg">
-                    + Tambah Tamu
-                </a>
-            </div>
+            @if (Auth::user()->roles == 'ADMIN')
+                <div class="mb-10">
+                    <a href="{{ route('dashboard.guest.create') }}"
+                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mr-4 rounded-md shadow-lg">
+                        + Tambah Tamu
+                    </a>
+                </div>
+            @endif
 
             <div class="bg-white overflow-hidden shadow sm:rounded-lg">
                 <div class="px-4 py-5 sm:p-6">
@@ -91,7 +140,9 @@
                                 <th>Alamat</th>
                                 <th>Tujuan</th>
                                 <th>Tanggal</th>
-                                <th>Action</th>
+                                @if (Auth::user()->roles == 'ADMIN')
+                                    <th>Action</th>
+                                @endif
                             </tr>
                         </thead>
                         <tbody></tbody>
