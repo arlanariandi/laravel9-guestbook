@@ -160,12 +160,15 @@
                                         class="px-10 py-4 text-2xl font-semibold rounded-lg bg-white-2 text-darkGreen">Dashboard</a>
                                 @else
                                     <a href="{{ route('login') }}"
-                                        class="px-10 py-4 text-2xl font-semibold rounded-lg bg-white-2 text-darkGreen">Log
-                                        in</a>
+                                        class="bg-white hover:bg-gray-300 text-blue-500 font-bold py-4 px-10 rounded-lg">
+                                        Log in
+                                    </a>
 
                                     @if (Route::has('register'))
-                                        <a href="{{ route('register') }}"
-                                            class="ml-4 px-10 py-4 text-2xl font-semibold rounded-lg bg-white-2 text-darkGreen">Register</a>
+                                        <a href="{{ route('register') }}" {{-- class="ml-4 px-10 py-4 text-2xl font-semibold rounded-lg bg-white-2 text-darkGreen"> --}}
+                                            class="bg-white hover:bg-gray-300 text-blue-500 font-bold py-4 px-10 ml-4 rounded-lg">
+                                            Register
+                                        </a>
                                     @endif
                                 @endauth
                             @endif
