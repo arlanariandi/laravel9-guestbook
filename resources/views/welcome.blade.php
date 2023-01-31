@@ -137,18 +137,23 @@
             </div>
 
             <!-- END: HERO BACKGROUND -->
-            <div class="relative z-10 px-4 mx-auto mt-15 hero md:mt-44 max-w-screen-2xl lg:px-24">
+            <div class="relative z-10 px-4 mx-auto mt-8 hero md:mt-32 max-w-screen-2xl lg:px-24">
                 <div class="grid grid-cols-1 gap-12 md:grid-cols-12">
                     <div class="md:col-span-11 lg:col-span-7">
                         <div
+                            class="text-5xl font-medium leading-normal hero-title text-gray-800 md:text-6xl leading-px85">
+                            Selamat Datang di
+                        </div>
+                        <div
                             class="text-5xl font-semibold leading-normal hero-title text-gray-800 md:text-6xl leading-px85">
-                            One platform to manage your guests </div>
+                            SMK BHAKTI PRAJA MARGASARI
+                        </div>
                         <div
                             class="mt-8 text-xl font-normal leading-8 hero-description text-gray-700 lg:leading-9 md:text-2xl">
-                            Learn how to efficiently manage your guests with a platform trusted by global leaders.
+                            Jl. Lugu Margasari Keb. Tegal
                         </div>
 
-                        <div class="mt-24">
+                        <div class="mt-24 mb-16">
                             @if (Route::has('login'))
                                 @auth
                                     <a href="{{ url('/dashboard') }}"
