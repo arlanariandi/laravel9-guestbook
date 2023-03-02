@@ -25,9 +25,9 @@
                             {{ __('Buku Tamu') }}
                         </x-jet-nav-link>
 
-                        <x-jet-nav-link href="{{ route('dashboard.restore') }}" :active="request()->routeIs('dashboard.restore')">
+                        {{-- <x-jet-nav-link href="{{ route('dashboard.restore') }}" :active="request()->routeIs('dashboard.restore')">
                             {{ __('Restore') }}
-                        </x-jet-nav-link>
+                        </x-jet-nav-link> --}}
                     @elseif (Auth::user()->roles == 'GURU')
                         <x-jet-nav-link href="{{ route('dashboard.guest.index') }}" :active="request()->routeIs('dashboard.guest.index')">
                             {{ __('Buku Tamu') }}
@@ -182,9 +182,9 @@
                     {{ __('Buku Tamu') }}
                 </x-jet-responsive-nav-link>
 
-                <x-jet-responsive-nav-link href="{{ route('dashboard.restore') }}" :active="request()->routeIs('dashboard.restore')">
+                {{-- <x-jet-responsive-nav-link href="{{ route('dashboard.restore') }}" :active="request()->routeIs('dashboard.restore')">
                     {{ __('Restore') }}
-                </x-jet-responsive-nav-link>
+                </x-jet-responsive-nav-link> --}}
             @elseif (Auth::user()->roles == 'GURU')
                 <x-jet-responsive-nav-link href="{{ route('dashboard.guest.index') }}" :active="request()->routeIs('dashboard.guest.index')">
                     {{ __('Buku Tamu') }}
