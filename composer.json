@@ -12,6 +12,7 @@
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.5",
+        "milon/barcode": "^10.0",
         "realrashid/sweet-alert": "^5.1",
         "yajra/laravel-datatables-oracle": "^10.0"
     },

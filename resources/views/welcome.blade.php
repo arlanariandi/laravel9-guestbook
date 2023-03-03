@@ -173,6 +173,14 @@
                                 @endauth
                             @endif
                         </div>
+
+                        <div class="flex flex-wrap">
+                            <div class="w-full px-4 mb-32">
+                                <div class="relative mt-10 bg-white max-w-min px-4 py-4 rounded-lg">
+                                    <div class="mx-auto">{!! DNS2D::getBarcodeHTML(route('create'), 'QRCODE') !!}</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
