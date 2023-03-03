@@ -13,7 +13,7 @@ class GuestCreateController extends Controller
         return view('create');
     }
 
-    public function store(GuestRequest $request)
+    public function store(Request $request)
     {
         $data = $request->all();
 
