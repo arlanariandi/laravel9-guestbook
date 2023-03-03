@@ -15,7 +15,7 @@ class GuestCreateController extends Controller
 
     public function store(Request $request)
     {
-        return $request->all();
+        // return $request->all();
         $data = $request->all();
 
         Guest::create($data);
