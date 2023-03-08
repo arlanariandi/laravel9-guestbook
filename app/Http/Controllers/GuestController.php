@@ -22,12 +22,12 @@ class GuestController extends Controller
             return DataTables::of($query)
                 ->addColumn('action', function ($item) {
                     return '
-                        <a class="inline-block border border-blue-500 bg-blue-500 text-white rounded-md px-4 py-1 m-1 font-semibold transition duration-500 ease select-none hover:bg-blue-700 focus:outline-none focus:shadow-outline" href="' . route('dashboard.guest.edit', $item->id) .
+                        <a class="inline-block border border-green-500 bg-green-500 text-white rounded-md px-4 py-1 m-1 font-semibold transition duration-500 ease select-none hover:bg-green-700 focus:outline-none focus:shadow-outline" href="' . route('dashboard.guest.edit', $item->id) .
                         '">
                             Edit
                         </a>
 
-                        <a class="inline-block border border-amber-500 bg-amber-500 text-white rounded-md px-2 py-1 m-1 font-semibold transition duration-500 ease select-none hover:bg-amber-800 focus:outline-none focus:shadow-outline"
+                        <a class="inline-block border border-green-500 bg-green-500 text-white rounded-md px-2 py-1 m-1 font-semibold transition duration-500 ease select-none hover:bg-green-800 focus:outline-none focus:shadow-outline"
                             href="' .
                         route('dashboard.guest.show', $item->id) .
                         '">
