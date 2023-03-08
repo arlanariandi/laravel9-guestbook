@@ -17,9 +17,9 @@
                     </x-jet-nav-link>
 
                     @if (Auth::user()->roles == 'ADMIN')
-                        {{-- <x-jet-nav-link href="{{ route('dashboard.user.index') }}" :active="request()->routeIs('dashboard.user.index')">
+                        <x-jet-nav-link href="{{ route('dashboard.user.index') }}" :active="request()->routeIs('dashboard.user.index')">
                             {{ __('User') }}
-                        </x-jet-nav-link> --}}
+                        </x-jet-nav-link>
 
                         <x-jet-nav-link href="{{ route('dashboard.guest.index') }}" :active="request()->routeIs('dashboard.guest.index')">
                             {{ __('Buku Tamu') }}
@@ -174,9 +174,9 @@
             </x-jet-responsive-nav-link>
 
             @if (Auth::user()->roles == 'ADMIN')
-                {{-- <x-jet-responsive-nav-link href="{{ route('dashboard.user.index') }}" :active="request()->routeIs('dashboard.user.index')">
+                <x-jet-responsive-nav-link href="{{ route('dashboard.user.index') }}" :active="request()->routeIs('dashboard.user.index')">
                     {{ __('User') }}
-                </x-jet-responsive-nav-link> --}}
+                </x-jet-responsive-nav-link>
 
                 <x-jet-responsive-nav-link href="{{ route('dashboard.guest.index') }}" :active="request()->routeIs('dashboard.guest.index')">
                     {{ __('Buku Tamu') }}

@@ -142,11 +142,11 @@
                 <div class="grid grid-cols-1 gap-12 md:grid-cols-12">
                     <div class="md:col-span-11 lg:col-span-7">
                         <div
-                            class="text-5xl font-medium leading-normal hero-title text-gray-800 md:text-6xl leading-px85">
+                            class="text-4xl font-medium leading-normal hero-title text-gray-800 md:text-5xl leading-px85">
                             Selamat Datang di
                         </div>
                         <div
-                            class="text-5xl font-semibold leading-normal hero-title text-gray-800 md:text-6xl leading-px85">
+                            class="text-4xl font-semibold leading-normal hero-title text-gray-800 md:text-5xl leading-px85">
                             SMK BHAKTI PRAJA MARGASARI
                         </div>
                         <div
@@ -166,10 +166,10 @@
                                     </a>
 
                                     @if (Route::has('register'))
-                                        {{-- <a href="{{ route('register') }}"
+                                        <a href="{{ route('register') }}"
                                             class="bg-white hover:bg-gray-300 text-blue-500 font-bold py-4 px-10 ml-4 rounded-lg">
                                             Register
-                                        </a> --}}
+                                        </a>
                                     @endif
                                 @endauth
                             @endif
