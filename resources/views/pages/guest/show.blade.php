@@ -54,6 +54,13 @@
                             </tr>
 
                             <tr>
+                                <th class="border px-6 py-4 text-right">STATUS</th>
+                                <td class="border px-6 py-4">
+                                    {{ $guest->status }}
+                                </td>
+                            </tr>
+
+                            <tr>
                                 <th class="border px-6 py-4 text-right">DATANG</th>
                                 <td class="border px-6 py-4">
                                     {{ $guest->created_at->format('d M Y - H:i') }}

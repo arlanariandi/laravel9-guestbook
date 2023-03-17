@@ -30,6 +30,7 @@ class GuestRequest extends FormRequest
             'address' => 'required|string|max:255',
             'description' => 'required|string|max:255',
             'phone' => 'required|string',
+            'status' => 'required',
         ];
     }
 }

@@ -43,14 +43,8 @@
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Jenis
                                 Kelamin
                                 <span class="text-red-500">*</span></label>
-                            {{-- <select name="gender"
-                                class="appearance-none block w-full lg:w-1/2 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                                <option disabled selected>--- pilih jenis kelamin ---</option>
-                                <option value="Laki-laki">Laki-laki</option>
-                                <option value="Perempuan">Perempuan</option>
-                            </select> --}}
                             <ul
-                                class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white lg:w-1/2 ">
+                                class="items-center w-full text-sm font-medium text-gray-900 bg-gray-200 border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white lg:w-1/2 ">
                                 <li
                                     class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                                     <div class="flex items-center pl-3">
@@ -97,6 +91,35 @@
                             <input value="{{ old('phone') }}" name="phone"
                                 class="appearance-none block w-full lg:w-1/2 bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 type="number">
+                        </div>
+
+                        <div class="w-full px-3 mb-6">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Status
+                                <span class="text-red-500">*</span>
+                            </label>
+                            <ul
+                                class="items-center w-full text-sm font-medium bg-gray-200 text-gray-900 border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white lg:w-1/2 ">
+                                <li
+                                    class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                                    <div class="flex items-center pl-3">
+                                        <input id="status-license" type="radio" value="Ditemui" name="status"
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                        <label for="status-license"
+                                            class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ditemui</label>
+                                    </div>
+                                </li>
+
+                                <li
+                                    class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
+                                    <div class="flex items-center pl-3">
+                                        <input id="horizontal-id" type="radio" value="Belum" name="status"
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                                        <label for="horizontal-id"
+                                            class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Belum
+                                            ditemui</label>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
