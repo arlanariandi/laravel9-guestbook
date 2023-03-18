@@ -24,10 +24,10 @@
                     responsive: true,
 
                     // buttom
-                    dom: 'Blfrtip',
-                    buttons: [
-                        'excel', 'pdf', 'print'
-                    ],
+                    // dom: 'Blfrtip',
+                    // buttons: [
+                    //     'excel', 'print'
+                    // ],
 
                     // serverSide
                     processing: true,
@@ -55,6 +55,10 @@
                         {
                             data: 'description',
                             name: 'description'
+                        },
+                        {
+                            data: 'status',
+                            name: 'status'
                         },
                         {
                             data: 'created_at',
@@ -108,6 +112,10 @@
                             name: 'description'
                         },
                         {
+                            data: 'status',
+                            name: 'status'
+                        },
+                        {
                             data: 'created_at',
                             name: 'created_at'
                         },
@@ -127,6 +135,12 @@
                         class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mr-4 rounded-md shadow-lg">
                         + Tambah Tamu
                     </a>
+
+                    <a href="{{ route('dashboard.guest.cetak') }}"
+                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mr-4 rounded-md shadow-lg"
+                        target="_blank">
+                        Cetak PDF
+                    </a>
                 </div>
             @endif
 
@@ -139,6 +153,7 @@
                                 <th>Nama</th>
                                 <th>Alamat</th>
                                 <th>Tujuan</th>
+                                <th>Status</th>
                                 <th>Tanggal</th>
                                 @if (Auth::user()->roles == 'ADMIN')
                                     <th>Action</th>
