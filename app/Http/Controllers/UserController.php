@@ -30,7 +30,8 @@ class UserController extends Controller
                         <form class="inline-block" action="' .
                         route('dashboard.user.destroy', $item->id) .
                         '" method="POST">
-                            <button class="border border-red-500 bg-red-500 text-white rounded-md px-2 py-1 m-1 font-semibold transition duration-500 ease select-none hover:bg-red-700 focus:outline-none focus:shadow-outline" >
+                            <button class="border border-red-500 bg-red-500 text-white rounded-md px-2 py-1 m-1 font-semibold transition duration-500 ease select-none hover:bg-red-700 focus:outline-none focus:shadow-outline" onclick="return confirm(`Apakah kamu yakin akan menghapus data ini?`)"
+                            >
                                 Delete
                             </button>
                             ' .
