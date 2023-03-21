@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\GuestRequest;
 use App\Models\Guest;
 use Barryvdh\DomPDF\Facade\Pdf as FacadePdf;
-use Barryvdh\DomPDF\PDF as PDF;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -144,23 +143,17 @@ class GuestController extends Controller
         return redirect()->route('dashboard.guest.index');
     }
 
-    public function cetak()
+    public function cetakpdf()
     {
         $guest = Guest::all();
 
-        // return view('pages.guest.pdf', compact('guest'));
-
         $detail = ['guest' => $guest];
         $pdf = FacadePdf::loadView('pages.guest.pdf', $detail);
-        return $pdf->download('laporan-tamu.pdf');
+        return $pdf->stream('laporan-tamu.pdf');
     }
 
-    // public function cetakpdf()
-    // {
-    //     $data = Guest::all();
-
-    //     $detail = ['data' => $data];
-    //     $pdf = FacadePdf::loadView('pages.guest.pdf', $detail);
-    //     return $pdf->download('laporan-tamu.pdf');
-    // }
+    public function cetaksesi()
+    {
+        return view('pages.guest.cetak');
+    }
 }

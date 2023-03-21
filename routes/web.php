@@ -23,7 +23,8 @@ Route::middleware(['auth:sanctum', 'verified'])
         Route::middleware(['admin'])->group(function () {
             Route::resource('user', UserController::class);
             Route::resource('guest', GuestController::class);
-            Route::get('cetakpdf', [GuestController::class, 'cetak'])->name('guest.cetak');
+            Route::get('cetakpdf', [GuestController::class, 'cetakpdf'])->name('guest.cetakpdf');
+            Route::get('cetaksesi', [GuestController::class, 'cetaksesi'])->name('guest.cetaksesi');
 
             // resotore user
             Route::get('restore', [RestoreUserController::class, 'index'])->name('restore');
