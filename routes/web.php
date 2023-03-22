@@ -24,7 +24,8 @@ Route::middleware(['auth:sanctum', 'verified'])
             Route::resource('user', UserController::class);
             Route::resource('guest', GuestController::class);
             Route::get('cetakpdf', [GuestController::class, 'cetakpdf'])->name('guest.cetakpdf');
-            Route::get('cetaksesi', [GuestController::class, 'cetaksesi'])->name('guest.cetaksesi');
+            Route::get('cetakform', [GuestController::class, 'cetakform'])->name('guest.cetakform');
+            Route::get('cetaksesi/{start}/{end}', [GuestController::class, 'cetaksesi'])->name('guest.cetaksesi');
 
             // resotore user
             Route::get('restore', [RestoreUserController::class, 'index'])->name('restore');

@@ -152,8 +152,13 @@ class GuestController extends Controller
         return $pdf->stream('laporan-tamu.pdf');
     }
 
-    public function cetaksesi()
+    public function cetakform()
     {
         return view('pages.guest.cetak');
+    }
+
+    public function cetaksesi($start, $end)
+    {
+        dd(["Tanggal awal : " . $start, "Tanggal akhir : " . $end]);
     }
 }
