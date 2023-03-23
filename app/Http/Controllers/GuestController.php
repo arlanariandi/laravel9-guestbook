@@ -159,6 +159,10 @@ class GuestController extends Controller
 
     public function cetaksesi($start, $end)
     {
-        dd(["Tanggal awal : " . $start, "Tanggal akhir : " . $end]);
+        // dd(["Tanggal awal : " . $start, "Tanggal akhir : " . $end]);
+
+        $guest = Guest::whereBetween('created_at', [$start, $end])->get();
+
+        return view('pages.guest.pdf', compact('guest'));
     }
 }
