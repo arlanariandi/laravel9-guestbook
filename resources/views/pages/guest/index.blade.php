@@ -136,9 +136,15 @@
                         + Tambah Tamu
                     </a>
 
+                    <a href="{{ route('dashboard.guest.cetakpdf') }}"
+                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mr-4 rounded-md shadow-lg"
+                        target="_blank">
+                        Cetak All
+                    </a>
+
                     <a href="{{ route('dashboard.guest.cetakform') }}"
                         class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mr-4 rounded-md shadow-lg">
-                        Cetak PDF
+                        Cetak per Tanggal
                     </a>
                 </div>
             @endif

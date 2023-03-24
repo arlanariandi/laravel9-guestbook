@@ -28,6 +28,7 @@ class GuestSeeder extends Seeder
                 'address' => $faker->address,
                 'description' => $faker->text($maxNbChars = 50),
                 'phone' => $faker->phoneNumber,
+                'status' => 'Ditemui',
                 'created_at' => $faker->dateTimeThisMonth(),
             ]);
         }

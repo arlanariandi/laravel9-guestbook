@@ -30,7 +30,8 @@
                     <div class="w-full px-3">
                         <a href=""
                             onclick="this.href='cetaksesi/'+ document.getElementById('start').value + '/' + document.getElementById('end').value"
-                            class="bg-teal-500 hover:bg-teal-800 text-white font-bold py-2 px-10 rounded-md shadow-lg">Cetak</a>
+                            class="bg-teal-500 hover:bg-teal-800 text-white font-bold py-2 px-10 rounded-md shadow-lg"
+                            target="_blank">Cetak</a>
 
                         <a href="{{ route('dashboard.guest.index') }}"
                             class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-10 ml-3 rounded-md shadow-lg">
