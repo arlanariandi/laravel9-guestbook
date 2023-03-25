@@ -161,7 +161,7 @@ class GuestController extends Controller
     {
         // dd(["Tanggal awal : " . $start, "Tanggal akhir : " . $end]);
 
-        $guest = Guest::whereBetween('created_at', [$start, $end])->get();
+        $guest = Guest::whereBetween('created_at', [$start, $end])->orderBy('created_at', 'ASC')->get();
 
         return view('pages.guest.pdf', compact('guest'));
     }
